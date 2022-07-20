@@ -1,4 +1,3 @@
-# ☕ STARBUCKS
-스타벅스 랜딩페이지 연습입니다!
+# 스타벅스클론
 
-[DEMO](https://elegant-colden-60d92b.netlify.app/) 홈페이지 보러가기!
+starbucks clone.

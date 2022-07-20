@@ -4,5 +4,30 @@
   "main": "index.js",
   "repository": "https://github.com/changyuyeo/starbucks.git",
   "author": "여찬규 <wry5533@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "lint-staged": {
+    "*": [
+      "prettier --write",
+      "git add ."
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "commit": "git add . && yarn git-cz"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  }
 }
