@@ -1,0 +1,8 @@
+{
+  "name": "starbucks_clone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/changyuyeo/starbucks.git",
+  "author": "여찬규 <wry5533@gmail.com>",
+  "license": "MIT"
+}
