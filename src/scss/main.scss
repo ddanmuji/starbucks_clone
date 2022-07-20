@@ -1,6 +1,4 @@
 @import 'foundation/all';
 
-body {
-  background-color: #333;
-  font-family: 'Noto Sans KR', sans-serif;
-}
+@import 'styles/common';
+@import 'styles/header';
