@@ -6,7 +6,7 @@
   "author": "여찬규 <wry5533@gmail.com>",
   "license": "MIT",
   "lint-staged": {
-    "*": [
+    "*.{ts}": [
       "prettier --write",
       "git add ."
     ]
