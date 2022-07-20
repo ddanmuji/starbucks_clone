@@ -1,9 +1,5 @@
-$color: #333;
+@import 'foundation/all';
 
 body {
-  background-color: $color;
-
-  h1 {
-    display: flex;
-  }
+  background-color: #333;
 }
