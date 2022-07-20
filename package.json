@@ -2,11 +2,11 @@
   "name": "starbucks_clone",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/changyuyeo/starbucks.git",
+  "repository": "https://github.com/changyuyeo/starbucks_clone.git",
   "author": "여찬규 <wry5533@gmail.com>",
   "license": "MIT",
   "lint-staged": {
-    "*.{ts}": [
+    "*.ts": [
       "prettier --write",
       "git add ."
     ]
@@ -16,18 +16,35 @@
       "path": "cz-conventional-changelog"
     }
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "staticFiles": {
+    "staticFiles": {
+      "staticPath": "static"
+    }
+  },
   "scripts": {
     "prepare": "husky install",
-    "commit": "git add . && yarn git-cz"
+    "commit": "git add . && yarn git-cz",
+    "dev": "parcel src/index.html --port 3030",
+    "build": "parcel build src/index.html",
+    "clean": "rm -rf dist node_modules .cache"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "autoprefixer": "^9.8.6",
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "postcss": "^8.4.14",
     "prettier": "^2.7.1",
+    "sass": "^1.53.0",
     "typescript": "^4.7.4"
   }
 }
