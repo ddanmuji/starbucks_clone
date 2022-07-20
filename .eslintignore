@@ -1,0 +1,7 @@
+**/node_modules
+**/.cache
+**/dist
+**/.eslintrc.js
+**/package.json
+**/package-lock.json
+**/yarn.lock
