@@ -2,11 +2,8 @@
   background-color: #f6f5f0;
   border-bottom: 1px solid #c8c8c8;
 
-  &__inner {
+  > .inner {
     height: 120px;
-    margin: 0 auto;
-    position: relative;
-    width: 1100px;
   }
 
   &__logo {
@@ -19,7 +16,9 @@
   }
 
   &__sub-menu-group {
+    align-items: center;
     display: flex;
+    font-size: 13px;
     position: absolute;
     right: 0;
     top: 10px;
@@ -98,5 +97,87 @@
     right: 5px;
     top: 0;
     transition: all 0.4s;
+  }
+
+  &__main-menu {
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+
+  &__main-menu .menu-item {
+    cursor: default;
+
+    &__name {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      padding: 10px 20px 34px;
+    }
+
+    &__contents {
+      display: none;
+      left: 0;
+      position: fixed;
+      width: 100%;
+    }
+  }
+
+  &__main-menu .menu-item:hover {
+    background-color: #2c2a29;
+    border-radius: 6px 6px 0 0;
+    color: #690;
+
+    .menu-item__contents {
+      color: #2c2a29;
+      display: block;
+    }
+  }
+}
+
+.menu-contents {
+  background-color: #2c2a29;
+
+  > .inner {
+    display: flex;
+    padding: 20px 0;
+  }
+
+  &__group {
+    width: 220px;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 14px;
+    padding: 3px 0 12px;
+  }
+
+  &__item {
+    color: #999;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 5px 0;
+
+    &:hover {
+      color: #690;
+    }
+  }
+
+  &__texture {
+    background-image: url('/images/main_menu_pattern.jpg');
+    font-size: 12px;
+    padding: 26px 0;
+  }
+
+  &__texture h4 {
+    color: #999;
+    font-weight: 700;
+  }
+
+  &__texture p {
+    color: #690;
+    margin: 4px 0 14px;
   }
 }
