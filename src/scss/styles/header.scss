@@ -1,8 +1,8 @@
 .header {
-  background-color: #333;
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
 
   &__inner {
-    background-color: #eee;
     height: 120px;
     margin: 0 auto;
     position: relative;
@@ -18,8 +18,12 @@
     top: 0;
   }
 
-  // &__sub-menu-group {
-  // }
+  &__sub-menu-group {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
 
   &__sub-menu {
     display: flex;
@@ -31,7 +35,7 @@
   }
 
   &__sub-menu li::before {
-    background-color: #e5e5e5;
+    background-color: #ccc;
     bottom: 0;
     content: '';
     height: 12px;
@@ -56,6 +60,43 @@
     color: $text-color;
   }
 
-  // &__sub-search {
-  // }
+  &__search {
+    height: 34px;
+    position: relative;
+
+    &--focused .material-icons {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+  &__search input {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #777;
+    font-size: 12px;
+    height: 34px;
+    outline: none;
+    padding: 4px 10px;
+    transition: width 0.4s;
+    width: 36px;
+  }
+
+  &__search input:focus {
+    border-color: #690;
+    width: 190px;
+  }
+
+  &__search .material-icons {
+    bottom: 0;
+    cursor: pointer;
+    height: 24px;
+    margin: auto;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    transition: all 0.4s;
+  }
 }

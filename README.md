@@ -1,6 +1,6 @@
 # STARBUCKS CLONE
 
-> [🖥 DEMO](starbucks-changyu.netlify.app/) - netlify deploy
+> [🖥 DEMO](https://starbucks-changyu.netlify.app/) - netlify deploy
 
 <br />
 
