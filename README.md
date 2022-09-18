@@ -1,5 +1,7 @@
 # STARBUCKS CLONE
 
+스타벅스 클론코딩
+
 > [🖥 DEMO](https://jebong-starbucks.netlify.app/) - netlify deploy
 
 <br />
