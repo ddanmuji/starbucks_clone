@@ -2,7 +2,7 @@
   "name": "starbucks_clone",
   "version": "1.0.0",
   "repository": "https://github.com/ddanmuji/starbucks_clone",
-  "author": "여찬규 <wry5533@gmail.com>",
+  "author": "여찬규 <cgyeo5533@gmail.com>",
   "private": true,
   "lint-staged": {
     "*.scss": [
@@ -18,18 +18,15 @@
       "path": "cz-conventional-changelog"
     }
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "staticFiles": {
     "staticFiles": {
       "staticPath": "static"
     }
   },
   "scripts": {
-    "dev": "parcel src/index.html --port 3030",
-    "build": "parcel build src/index.html",
+    "dev": "parcel src/*.html --port 3030",
+    "build": "parcel build src/*.html",
     "lint": "eslint './src/ts/*.ts'",
     "lint:fix": "eslint --fix './src/ts/*.ts'",
     "lint:scss": "stylelint '**/*.scss'",
@@ -39,28 +36,31 @@
     "clean:cache": "bash ./scripts/clean-cache.sh",
     "clean:dist": "bash ./scripts/clean-dist.sh",
     "clean:modules": "bash ./scripts/clean-modules.sh",
-    "commit": "yarn git-cz"
+    "commit": "yarn git-cz",
+    "update": "yarn upgrade && yarn syncyarnlock -s -k"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.3",
-    "@commitlint/config-conventional": "^17.0.3",
-    "@typescript-eslint/eslint-plugin": "^5.30.7",
-    "@typescript-eslint/parser": "^5.30.7",
-    "autoprefixer": "^9.8.6",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@parcel/transformer-sass": "2.7.0",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "autoprefixer": "^9.8.8",
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.20.0",
+    "eslint": "^8.23.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "parcel-bundler": "^1.12.5",
+    "parcel": "^2.7.0",
     "parcel-plugin-static-files-copy": "^2.6.0",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.16",
     "prettier": "^2.7.1",
-    "sass": "^1.53.0",
-    "stylelint": "^14.9.1",
+    "sass": "^1.54.9",
+    "stylelint": "^14.11.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-sass-guidelines": "^9.0.1",
     "stylelint-prettier": "^2.0.0",
-    "typescript": "^4.7.4"
+    "syncyarnlock": "^1.0.19",
+    "typescript": "^4.8.3"
   }
 }
