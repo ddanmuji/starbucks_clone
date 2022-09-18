@@ -1,18 +1,16 @@
 {
   "name": "starbucks_clone",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/changyuyeo/starbucks_clone.git",
+  "repository": "https://github.com/ddanmuji/starbucks_clone",
   "author": "여찬규 <wry5533@gmail.com>",
-  "license": "MIT",
+  "private": true,
   "lint-staged": {
     "*.scss": [
       "yarn lint:scss-fix"
     ],
     "*.ts": [
       "eslint --fix",
-      "prettier --write",
-      "git add ."
+      "prettier --write"
     ]
   },
   "config": {
@@ -30,15 +28,18 @@
     }
   },
   "scripts": {
-    "prepare": "husky install",
-    "commit": "git add . && yarn git-cz",
     "dev": "parcel src/index.html --port 3030",
     "build": "parcel build src/index.html",
-    "clean": "rm -rf dist node_modules .cache",
     "lint": "eslint './src/ts/*.ts'",
     "lint:fix": "eslint --fix './src/ts/*.ts'",
     "lint:scss": "stylelint '**/*.scss'",
-    "lint:scss-fix": "yarn lint:scss --fix"
+    "lint:scss-fix": "yarn lint:scss --fix",
+    "prepare": "husky install",
+    "clean": "yarn clean:cache && yarn clean:dist && yarn clean:modules",
+    "clean:cache": "bash ./scripts/clean-cache.sh",
+    "clean:dist": "bash ./scripts/clean-dist.sh",
+    "clean:modules": "bash ./scripts/clean-modules.sh",
+    "commit": "yarn git-cz"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
